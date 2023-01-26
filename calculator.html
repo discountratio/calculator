@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calculator.css" />
+    <script src="./vanilla-tilt.js" type="text/javascript" defer></script>
+    <script src="calculator.js" defer></script>
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <div
+      id="calculator"
+      data-tilt
+      data-tilt-max="5"
+      data-tilt-glare
+      data-tilt-max-glare="0.1">
+      <div id="display">
+        <!-- <div id="input-numbers"></div> -->
+
+        <div id="display-left"></div>
+
+        <div id="display-top"></div>
+        <div id="display-bottom"></div>
+      </div>
+
+      <div id="text">
+        <p><strong>CALCULATOR 2000</strong></p>
+      </div>
+
+      <div id="buttons">
+        <button class="number" id="zero" value="0">0</button>
+        <button class="number" id="one" value="1">1</button>
+        <button class="number" id="two" value="2">2</button>
+        <button class="number" id="three" value="3">3</button>
+        <button class="number" id="four" value="4">4</button>
+        <button class="number" id="five" value="5">5</button>
+        <button class="number" id="six" value="6">6</button>
+        <button class="number" id="seven" value="7">7</button>
+        <button class="number" id="eight" value="8">8</button>
+        <button class="number" id="nine" value="9">9</button>
+        <button class="number" id="decimal" value=".">.</button>
+        <button class="equal" id="equal" value="=">=</button>
+        <button class="operator" id="add" value="+">+</button>
+        <button class="operator" id="subtract" value="-">-</button>
+        <button class="operator" id="divide" value="/">&divide;</button>
+        <button class="operator" id="multiply" value="*">&times;</button>
+        <button class="operator" id="sqrt" value="sqrt">&Sqrt;</button>
+        <button class="clear" id="backspace" value="backspace">🢀</button>
+        <button class="clear" id="clear" value="clear">AC</button>
+      </div>
+    </div>
+
+    <section> 
+
+      <p>
+        <h2>Calculator</h2>
+        The calculator project was an excellent way to get used to DOM manipulation and JavaScript fundamentals.
+        The calculator is styled using CSS grid for the layout and googlefonts for the text. 
+        Each button has a 'click' event listener, and there is a switch statement to assess button type
+        for the appropriate action. The calculator is reasonably functional, there are some minor issues 
+        that exist for the sake of design (i.e. calculation inputs / outputs are limited to 8 digits to prevent overflow).  
+        </p>  
+        
+        <p>Possible improvements I would like to make in the future include: responsiveness, calculation history, and key press effects replaced with animations</p>
+
+          <p>
+       An external library, <a href="https://micku7zu.github.io/vanilla-tilt.js/">VanillaTilt.js</a> was used for the tilt and glare effects.
+      </p>
+
+    </section>
+    <footer> Made By Kevin @discountratio &copy; 2022</footer>
+  </body>
+</html>

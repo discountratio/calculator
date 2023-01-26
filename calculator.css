@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Chakra+Petch&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "calc";
+  src: url(./assets/DejaVuSans-Bold.ttf);
+}
+@font-face {
+  font-family: "calc-display";
+  src: url(./assets/calc2.otf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  background: black;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 2rem;
+}
+
+#calculator {
+  font-family: "Chakra Petch", monospace;
+  font-size: clamp(20px, 2rem, 40px);
+  width: clamp(320px, 20rem, 800px);
+  aspect-ratio: 5/8;
+  background: #222;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px #222;
+  background: #444;
+  margin: auto;
+  display: grid;
+  grid-template-areas: "display" "text" "buttons";
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.25fr 0.1fr 1fr;
+}
+
+#text {
+  grid-area: text;
+  font-family: "Chakra Petch", cursive;
+  font-size: clamp(20px, 2rem, 40px);
+  white-space: nowrap;
+  width: 100%;
+  text-align: right;
+  text-justify: right;
+  color: white;
+  text-shadow: 2px 2px 0px #222;
+}
+
+#display {
+  box-shadow: inset 4px 4px #222;
+  width: 100%;
+  background: #222;
+  color: #f0f0f0;
+  display: grid;
+  font-family: "calc", monospace;
+  grid-template-areas: "left top" "left bottom";
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  padding: 0 5%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "calc", monospace;
+}
+#display > * {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  text-shadow: 1px 1px 8px rgb(26, 161, 224);
+  flex-shrink: 1;
+}
+#display #display-left {
+  grid-area: left;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+#display #display-top {
+  grid-area: top;
+  font-size: clamp(16px, 1.25rem, 24px);
+}
+#display #display-bottom {
+  grid-area: bottom;
+  font-size: clamp(32px, 2.5rem, 32px);
+}
+
+button {
+  outline: 0px solid #222;
+  border: 1px solid #222;
+  box-shadow: inset 1px 1px #222, 4px 4px #222;
+  border-radius: 10px;
+  font-family: "Chakra Petch", monospace;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  cursor: pointer;
+  transition: box-shadow 200ms, font-size 200ms;
+}
+button:hover {
+  box-shadow: inset 2px 2px #222, 3px 3px #222;
+}
+button:active {
+  box-shadow: inset 4px 4px #222, 2px 2px #222;
+}
+
+#buttons {
+  grid-area: buttons;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  gap: 2%;
+  grid-template-areas: "allclear backspace sqrt divide" "seven eight nine multiply" "four five six subtract" "one two three add" "decimal zero equal add";
+}
+#buttons .number {
+  background-color: rgb(196, 192, 192);
+  color: #222;
+}
+#buttons .operator {
+  background-color: #2155c7;
+  color: #f0f0f0;
+}
+#buttons .clear {
+  background-color: rgb(184, 28, 28);
+  color: #f0f0f0;
+}
+#buttons .equal {
+  background-color: #c4661a;
+  color: #f0f0f0;
+}
+#buttons #zero {
+  grid-area: zero;
+}
+#buttons #one {
+  grid-area: one;
+}
+#buttons #two {
+  grid-area: two;
+}
+#buttons #three {
+  grid-area: three;
+}
+#buttons #four {
+  grid-area: four;
+}
+#buttons #five {
+  grid-area: five;
+}
+#buttons #six {
+  grid-area: six;
+}
+#buttons #six {
+  grid-area: six;
+}
+#buttons #seven {
+  grid-area: seven;
+}
+#buttons #eight {
+  grid-area: eight;
+}
+#buttons #nine {
+  grid-area: nine;
+}
+#buttons #equal {
+  grid-area: equal;
+}
+#buttons #add {
+  grid-area: add;
+}
+#buttons #subtract {
+  grid-area: subtract;
+}
+#buttons #multiply {
+  grid-area: multiply;
+}
+#buttons #divide {
+  grid-area: divide;
+}
+#buttons #decimal {
+  grid-area: decimal;
+}
+#buttons #clear {
+  grid-area: backspace;
+}
+#buttons #allclear {
+  grid-area: allclear;
+}
+#buttons #sqrt {
+  grid-area: sqrt;
+}
+
+section {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 0.8rem;
+  background: #f0f0f0;
+  color: #222;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20vw;
+  height: 100vh;
+  padding: 0.5rem 1rem;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+  overflow: scroll;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #f0f0f0;
+  color: #222;
+  font-size: 24px;
+  width: 100vw;
+  font-family: "Chakra Petch", monospace;
+}/*# sourceMappingURL=calculator.css.map */
