@@ -13,7 +13,6 @@
   box-sizing: border-box;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -207,7 +206,6 @@ section {
   padding: 0.5rem 1rem;
   -webkit-user-select: text;
      -moz-user-select: text;
-      -ms-user-select: text;
           user-select: text;
   overflow: scroll;
 }
@@ -224,4 +222,4 @@ footer {
   font-size: 24px;
   width: 100vw;
   font-family: "Chakra Petch", monospace;
-}/*# sourceMappingURL=calculator.css.map */
+}
